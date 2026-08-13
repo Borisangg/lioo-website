@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found — Lioo</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0C0B0B" />
+  <link rel="icon" type="image/png" href="images/lioo-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body class="subpage">
+  <main class="page-main">
+    <section class="page-hero">
+      <div class="page-wrap"><div class="page-hero-content">
+        <span class="page-eyebrow">404</span>
+        <h1 class="page-title">This page is<br /><span class="gradient-text">out of style.</span></h1>
+        <p class="page-lead">The page you requested does not exist or has moved.</p>
+        <a id="home-link" href="./" class="btn-primary" style="margin-top: 34px">Back to Lioo</a>
+      </div></div>
+    </section>
+  </main>
+  <script>
+    if (window.location.hostname.endsWith('github.io')) {
+      document.getElementById('home-link').href = '/lioo-website/';
+    }
+  </script>
+</body>
+</html>

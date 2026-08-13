@@ -8,6 +8,13 @@
 (function () {
   'use strict';
 
+  const appUrl = window.LIOO_SITE && window.LIOO_SITE.appUrl;
+  if (appUrl) {
+    document.querySelectorAll('[data-app-link]').forEach((link) => {
+      link.setAttribute('href', appUrl);
+    });
+  }
+
   /* ─── HERO WORD REVEAL ─────────────────────────────── */
   const heroWords = document.querySelectorAll('.word-reveal');
   heroWords.forEach((word) => {
@@ -254,66 +261,4 @@
     );
     demoObserver.observe(demoSection);
   }
-})();
-
-/* ═══════ NOTIFY MODAL ═══════ */
-(() => {
-  const trigger = document.getElementById('coming-soon-trigger');
-  const overlay = document.getElementById('notify-overlay');
-  const modal = document.getElementById('notify-modal');
-  const closeBtn = document.getElementById('notify-close');
-  const form = document.getElementById('notify-form');
-  const emailInput = document.getElementById('notify-email');
-  const successEl = document.getElementById('notify-success');
-
-  if (!trigger || !overlay) return;
-
-  function openModal() {
-    overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    setTimeout(() => emailInput.focus(), 400);
-  }
-
-  function closeModal() {
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  trigger.addEventListener('click', openModal);
-  closeBtn.addEventListener('click', closeModal);
-
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) closeModal();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
-  });
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = emailInput.value.trim();
-    if (!email) return;
-
-    // Store locally (replace with real API endpoint later)
-    const emails = JSON.parse(localStorage.getItem('lioo_notify_emails') || '[]');
-    if (!emails.includes(email)) {
-      emails.push(email);
-      localStorage.setItem('lioo_notify_emails', JSON.stringify(emails));
-    }
-
-    // Show success
-    form.hidden = true;
-    successEl.hidden = false;
-    document.querySelector('.notify-privacy').style.display = 'none';
-
-    // Close after 2.5s
-    setTimeout(closeModal, 2500);
-    setTimeout(() => {
-      form.hidden = false;
-      successEl.hidden = true;
-      document.querySelector('.notify-privacy').style.display = '';
-      emailInput.value = '';
-    }, 3000);
-  });
 })();

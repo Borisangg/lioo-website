@@ -329,6 +329,8 @@ a {
 
 .nav-link:hover { color: var(--text-1); }
 .nav-link:hover::after { width: 100%; left: 0; }
+.nav-link.active { color: var(--text-1); }
+.nav-link.active::after { width: 100%; left: 0; }
 
 .nav-cta {
   font-size: 0.8125rem;
@@ -389,6 +391,7 @@ a {
 }
 
 .nav-mobile-link:hover { color: var(--accent); }
+.nav-mobile-link.active { color: var(--accent); }
 
 .nav-mobile-cta {
   margin-top: 16px;
