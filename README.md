@@ -37,7 +37,9 @@ lioo-website/
 
 The website is intentionally static: no build step and no hidden runtime dependencies. GitHub Pages deploys the repository automatically after changes reach `main`.
 
-The product destination is configured once in `site-config.js`. Update `appUrl` there when the product moves to `app.liooclo.com`.
+The product destination is configured once in `site-config.js` and points to `https://app.liooclo.com`.
+
+Legacy product routes on the marketing domain redirect to the matching route on the application domain. Query strings and URL fragments are preserved so password reset and authentication links continue to work after the domain split.
 
 ## Deployment
 

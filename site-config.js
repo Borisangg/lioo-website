@@ -1,5 +1,5 @@
 window.LIOO_SITE = Object.freeze({
-  // Keep the product destination in one place. Change this to
-  // https://app.liooclo.com after the app subdomain is deployed.
-  appUrl: 'https://liooclo.com'
+  // Keep the product destination in one place so the marketing site and
+  // product application remain independent.
+  appUrl: 'https://app.liooclo.com'
 });
