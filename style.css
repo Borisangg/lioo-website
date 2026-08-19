@@ -1173,6 +1173,9 @@ a {
   transition: all 0.35s var(--ease-spring);
   color: var(--text-1);
   font-family: var(--font);
+  text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .coming-soon-btn:hover {
@@ -1244,6 +1247,8 @@ a {
   opacity: 1;
   visibility: visible;
 }
+
+body.notify-modal-open { overflow: hidden; }
 
 .notify-modal {
   position: relative;
@@ -1361,6 +1366,16 @@ a {
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(244, 162, 139, 0.3);
 }
+
+.notify-status {
+  min-height: 1.2em;
+  margin: 0 0 4px;
+  color: #9bd6a0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.notify-status.error { color: #f2a49b; }
 
 .notify-success {
   display: flex;

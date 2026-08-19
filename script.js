@@ -15,6 +15,86 @@
     });
   }
 
+  /* ─── NOTIFY ME MODAL ──────────────────────────────── */
+  const notifyOverlay = document.getElementById('notify-overlay');
+  const notifyForm = document.getElementById('notify-form');
+  const notifyEmail = document.getElementById('notify-email');
+  const notifyStatus = document.getElementById('notify-status');
+  const notifyOpeners = document.querySelectorAll('[data-notify-open]');
+  const notifyClosers = document.querySelectorAll('[data-notify-close]');
+  let notifyPreviousFocus = null;
+  let notifyPasteTracked = false;
+
+  function trackMarketingEvent(eventName, properties) {
+    const event = { event: eventName, ...properties };
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(event);
+    if (typeof window.gtag === 'function') window.gtag('event', eventName, properties);
+    document.dispatchEvent(new CustomEvent('lioo:marketing-event', { detail: event }));
+  }
+
+  function setNotifyStatus(message, isError) {
+    if (!notifyStatus) return;
+    notifyStatus.textContent = message;
+    notifyStatus.classList.toggle('error', Boolean(isError));
+  }
+
+  function openNotifyModal() {
+    if (!notifyOverlay) return;
+    notifyPreviousFocus = document.activeElement;
+    notifyOverlay.classList.add('active');
+    notifyOverlay.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('notify-modal-open');
+    setNotifyStatus('', false);
+    trackMarketingEvent('notify_me_opened', { source: 'coming_soon_button' });
+    window.setTimeout(() => notifyEmail?.focus(), 100);
+  }
+
+  function closeNotifyModal() {
+    if (!notifyOverlay) return;
+    notifyOverlay.classList.remove('active');
+    notifyOverlay.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('notify-modal-open');
+    if (notifyPreviousFocus && typeof notifyPreviousFocus.focus === 'function') notifyPreviousFocus.focus();
+  }
+
+  notifyOpeners.forEach((opener) => opener.addEventListener('click', openNotifyModal));
+  notifyClosers.forEach((closer) => closer.addEventListener('click', closeNotifyModal));
+  notifyOverlay?.addEventListener('click', (event) => {
+    if (event.target === notifyOverlay) closeNotifyModal();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && notifyOverlay?.classList.contains('active')) closeNotifyModal();
+  });
+
+  notifyEmail?.addEventListener('paste', () => {
+    window.setTimeout(() => {
+      notifyEmail.value = notifyEmail.value.trim();
+    }, 0);
+    if (!notifyPasteTracked) {
+      notifyPasteTracked = true;
+      trackMarketingEvent('notify_email_pasted', { source: 'notify_modal' });
+    }
+  });
+
+  notifyForm?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const email = notifyEmail.value.trim();
+    notifyEmail.value = email;
+    if (!notifyEmail.checkValidity()) {
+      setNotifyStatus('Please enter a valid email address.', true);
+      trackMarketingEvent('notify_email_submission_failed', { source: 'notify_modal', reason: 'invalid_email' });
+      notifyEmail.focus();
+      return;
+    }
+
+    trackMarketingEvent('notify_email_submitted', { source: 'notify_modal', delivery: 'mailto' });
+    const subject = encodeURIComponent('Lioo app launch notification');
+    const body = encodeURIComponent(`Please add ${email} to the Lioo app launch notification list.`);
+    window.location.href = `mailto:support@liooclo.com?subject=${subject}&body=${body}`;
+    setNotifyStatus('Your email app is opening. Send the message to finish.', false);
+  });
+
   /* ─── HERO WORD REVEAL ─────────────────────────────── */
   const heroWords = document.querySelectorAll('.word-reveal');
   heroWords.forEach((word) => {
