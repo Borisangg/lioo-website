@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="bg" data-lang-alt="../">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lioo — Твоят AI личен стилист</title>
+  <meta name="description" content="Lioo е личен стилист с изкуствен интелект. Опиши какво искаш, получи подбрани идеи за визии и пазарувай по-умно — всичко това в обикновен чат." />
+  <meta name="keywords" content="AI стилист, личен стилист, мода, AI, визии, подбор на облекло, Lioo, стилови препоръки" />
+  <link rel="canonical" href="https://liooclo.com/bg/" />
+  <link rel="alternate" hreflang="en" href="https://liooclo.com/" />
+  <link rel="alternate" hreflang="bg" href="https://liooclo.com/bg/" />
+  <link rel="alternate" hreflang="x-default" href="https://liooclo.com/" />
+  <meta name="theme-color" content="#0C0B0B" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="bg_BG" />
+  <meta property="og:title" content="Lioo — Твоят AI личен стилист" />
+  <meta property="og:description" content="Опиши стила си. Получи подбрани визии. Пазарувай по-умно." />
+  <meta property="og:url" content="https://liooclo.com/bg/" />
+  <meta property="og:image" content="https://liooclo.com/images/hero-phone.png" />
+
+  <script src="../lang.js"></script>
+  <link rel="icon" type="image/png" href="../images/lioo-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../style.css?v=lang-20261108" />
+</head>
+<body>
+
+  <!-- ═══════════════════════ NAVIGATION ═══════════════════════ -->
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <a href="./" class="nav-logo" aria-label="Lioo — начало">
+        <img src="../images/lioo-logo.png" alt="Lioo" class="nav-logo-img" />
+      </a>
+      <div class="nav-links">
+        <a href="./" class="nav-link active" aria-current="page">Начало</a>
+        <a href="features/" class="nav-link">Функции</a>
+        <a href="contact/" class="nav-link">Контакти</a>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Език"><a href="../" class="lang-link" lang="en" hreflang="en" data-set-lang="en">EN</a><a href="./" class="lang-link active" lang="bg" hreflang="bg" aria-current="true" data-set-lang="bg">BG</a></div><a href="https://app.liooclo.com" class="nav-cta" id="nav-try-btn" data-app-link>Опитай Lioo</a>
+      <button class="nav-mobile-toggle" id="mobile-toggle" type="button" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile-menu" id="mobile-menu">
+      <a href="./" class="nav-mobile-link active" aria-current="page">Начало</a>
+      <a href="features/" class="nav-mobile-link">Функции</a>
+      <a href="contact/" class="nav-mobile-link">Контакти</a>
+      <a href="https://app.liooclo.com" class="nav-mobile-cta" data-app-link>Опитай Lioo</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section id="hero">
+    <div class="hero-aurora"></div>
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-center">
+
+
+      <h1 class="hero-title">
+        <span class="word-reveal" data-delay="100">Стилът,</span>
+        <span class="word-reveal gradient-text" data-delay="300">преосмислен</span><br />
+        <span class="word-reveal" data-delay="500">от AI.</span>
+      </h1>
+
+      <p class="hero-subtitle scroll-fade-in" data-delay="700">
+        Опиши какво искаш. Lioo подбира цели визии<br class="hide-mobile" />
+        и намира най-добрите артикули — за да изглеждаш страхотно без безкрайно скролване.
+      </p>
+
+      <div class="hero-actions scroll-fade-in" data-delay="900">
+        <a href="https://app.liooclo.com" class="btn-primary" id="hero-cta-primary" data-app-link>
+          <span>Започни сега</span>
+          <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+            <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+        <a href="#how-it-works" class="btn-secondary" id="hero-cta-secondary">Виж как работи</a>
+      </div>
+
+      <button class="coming-soon-btn scroll-fade-in" data-delay="1100" type="button" data-notify-open aria-haspopup="dialog" aria-controls="notify-overlay">
+        <div class="store-icons" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.32 2.32-1.55 4.3-3.74 4.25z"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3.609 1.814 13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893 2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.4 2.302 1.323a1 1 0 0 1 0 1.74l-2.302 1.323-2.534-2.533 2.534-2.533zM5.864 2.658 16.8 8.99l-2.302 2.302-8.635-8.635z"/></svg>
+        </div>
+        <div class="coming-soon-text">
+          <span class="coming-label">Очаквайте скоро</span>
+          <span class="coming-stores">App Store &amp; Google Play</span>
+        </div>
+        <svg class="coming-soon-arrow" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02z" clip-rule="evenodd"/></svg>
+      </button>
+    </div>
+
+    <div class="hero-phone-container" id="hero-phone-parallax">
+      <div class="hero-phone-glow"></div>
+      <img src="../images/hero-phone.png" alt="Приложението Lioo — AI стилист" class="hero-phone-img" loading="eager" />
+    </div>
+
+    <div class="hero-scroll-indicator" id="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Надолу</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ STATEMENT ═══════════════════════ -->
+  <section id="statement">
+    <div class="statement-inner">
+      <p class="statement-text">
+        <span class="s-word" data-scroll-reveal>Модата</span>
+        <span class="s-word" data-scroll-reveal>трябва</span>
+        <span class="s-word" data-scroll-reveal>да</span>
+        <span class="s-word" data-scroll-reveal>е</span>
+        <span class="s-word accent" data-scroll-reveal>лесна.</span><br />
+        <span class="s-word" data-scroll-reveal>Твоят</span>
+        <span class="s-word" data-scroll-reveal>AI</span>
+        <span class="s-word" data-scroll-reveal>стилист</span>
+        <span class="s-word" data-scroll-reveal>го</span>
+        <span class="s-word" data-scroll-reveal>прави</span>
+        <span class="s-word accent" data-scroll-reveal>възможно.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FEATURES ═══════════════════════ -->
+  <section id="features">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag scroll-fade-in">Функции</span>
+        <h2 class="section-title scroll-fade-in">
+          Всичко, от което се нуждаеш.<br /><span class="gradient-text">Нищо излишно.</span>
+        </h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card scroll-scale-in" id="feature-chat">
+          <div class="feature-card-bg"></div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Започваш с чат</h3>
+          <p class="feature-desc">Кажи на Lioo какво ти трябва с прости думи. AI разбира контекста, повода, фигурата и личния ти стил.</p>
+        </div>
+
+        <div class="feature-card scroll-scale-in" id="feature-visual">
+          <div class="feature-card-bg"></div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Визуално търсене</h3>
+          <p class="feature-desc">Качи снимка на визия, която ти харесва. Lioo намира подобни артикули, които можеш наистина да купиш — моментално.</p>
+        </div>
+
+        <div class="feature-card scroll-scale-in" id="feature-personal">
+          <div class="feature-card-bg"></div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Персонализирано</h3>
+          <p class="feature-desc">Запомня мерките, стиловите ти предпочитания и къде пазаруваш, за да дава прецизно подбрани препоръки.</p>
+        </div>
+
+        <div class="feature-card scroll-scale-in" id="feature-outfits">
+          <div class="feature-card-bg"></div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456Z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Цели визии</h3>
+          <p class="feature-desc">Не просто артикули, а цели визии. Всяка комбинация е подбрана от AI, за да си пасва от главата до петите.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SHOWCASE ═══════════════════════ -->
+  <section id="showcase">
+    <div class="showcase-sticky">
+      <div class="showcase-text">
+        <h2 class="showcase-title scroll-fade-in">
+          Виж я.<br /><span class="gradient-text">Стилизирай я.</span><br />Носи я.
+        </h2>
+      </div>
+      <div class="showcase-image scroll-scale-in">
+        <img src="../images/outfit-grid.png" alt="Комбинации от облекла, подбрани от AI" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ HOW IT WORKS ═══════════════════════ -->
+  <section id="how-it-works">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag scroll-fade-in">Как работи</span>
+        <h2 class="section-title scroll-fade-in">
+          Три стъпки до<br /><span class="gradient-text">перфектната ти визия.</span>
+        </h2>
+      </div>
+
+      <div class="steps-timeline">
+        <div class="step-item scroll-slide-left" id="step-1">
+          <div class="step-number-big">01</div>
+          <div class="step-content">
+            <div class="step-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.59 48.59 0 0 0 5.887-.47c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="step-title">Опиши</h3>
+            <p class="step-desc">Кажи на Lioo какво ти трябва с обикновени думи или качи снимка на визия, която обичаш.</p>
+          </div>
+        </div>
+
+        <div class="step-item scroll-slide-right" id="step-2">
+          <div class="step-number-big">02</div>
+          <div class="step-content">
+            <div class="step-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456Z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="step-title">AI подбира</h3>
+            <p class="step-desc">Lioo отчита предпочитанията ти, фигурата, времето и тенденциите, за да създаде перфектната визия — за секунди.</p>
+          </div>
+        </div>
+
+        <div class="step-item scroll-slide-left" id="step-3">
+          <div class="step-number-big">03</div>
+          <div class="step-content">
+            <div class="step-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="step-title">Купи и носи</h3>
+            <p class="step-desc">Сравни цените и пазарувай директно от най-добрата оферта, налична във твоята държава.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ LIVE DEMO ═══════════════════════ -->
+  <section id="demo">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag scroll-fade-in">Виж го в действие</span>
+        <h2 class="section-title scroll-fade-in">
+          Твоят стилист е<br /><span class="gradient-text">винаги на линия.</span>
+        </h2>
+      </div>
+
+      <div class="demo-chat-wrapper scroll-scale-in">
+        <div class="demo-chat-window" id="demo-chat">
+          <div class="demo-chat-header">
+            <div class="demo-chat-header-left">
+              <div class="demo-chat-avatar">
+                <img src="../images/lioo-icon.png" alt="Lioo" class="demo-avatar-img" />
+              </div>
+              <div>
+                <div class="demo-chat-name">Lioo AI</div>
+                <div class="demo-chat-status"><span class="status-dot"></span> На линия</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="demo-chat-messages" id="demo-messages">
+            <div class="demo-msg demo-msg-ai demo-msg-visible">
+              <div class="demo-msg-content">Здравей! Аз съм Lioo, твоят личен AI стилист. 👋 Какво търсиш днес?</div>
+            </div>
+            <div class="demo-msg demo-msg-user" data-delay="800">
+              <div class="demo-msg-content">Следващия уикенд имам сватба на плажа. Трябва ми нещо елегантно, но не твърде официално</div>
+            </div>
+            <div class="demo-msg demo-msg-ai" data-delay="2200">
+              <div class="demo-msg-content">
+                Чудесен избор! За сватба на плажа препоръчвам <strong>лен</strong> за комфорт и <strong>земни или пастелни цветове</strong>. Ще ти подготвя няколко варианта...
+              </div>
+            </div>
+            <div class="demo-msg demo-msg-ai" data-delay="3800">
+              <div class="demo-msg-content">
+                <div class="demo-outfit-card">
+                  <div class="demo-outfit-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Сватба на плажа — визия 1
+                  </div>
+                  <div class="demo-outfit-items">
+                    <div class="demo-outfit-item"><div class="demo-outfit-item-color" style="background:#E8D5C4"></div><span>Ленен блейзър — пясъчен</span></div>
+                    <div class="demo-outfit-item"><div class="demo-outfit-item-color" style="background:#F5F0EB"></div><span>Памучна риза — бяла</span></div>
+                    <div class="demo-outfit-item"><div class="demo-outfit-item-color" style="background:#C4B5A3"></div><span>Чино панталон — каки</span></div>
+                    <div class="demo-outfit-item"><div class="demo-outfit-item-color" style="background:#8B7355"></div><span>Кожени мокасини — светлокафяви</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="demo-msg demo-msg-user" data-delay="5600">
+              <div class="demo-msg-content">Страхотно! Можеш ли да ми намериш подобен блейзър до 120 €?</div>
+            </div>
+            <div class="demo-msg demo-msg-ai" data-delay="7000">
+              <div class="demo-msg-content">Намерих 3 чудесни варианта от Zara, Mango и H&amp;M — всички до 120 € и налични в твоя размер. Искаш ли да ти ги покажа?</div>
+            </div>
+          </div>
+
+          <div class="demo-chat-input">
+            <span class="demo-input-text">Попитай Lioo за артикул или визия...</span>
+            <div class="demo-input-actions">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                <path d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CTA ═══════════════════════ -->
+  <section id="cta">
+    <div class="cta-aurora"></div>
+    <div class="cta-content">
+      <h2 class="cta-title scroll-fade-in">
+        Готов ли си да откриеш<br />
+        <span class="gradient-text">стила си?</span>
+      </h2>
+      <p class="cta-subtitle scroll-fade-in">Безплатно начало. Без кредитна карта.</p>
+      <div class="scroll-fade-in" data-delay="200">
+        <a href="https://app.liooclo.com" class="btn-primary btn-lg" id="cta-main-btn" data-app-link>
+          <span>Опитай Lioo безплатно</span>
+          <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+            <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ NOTIFY MODAL ═══════════════════════ -->
+  <div class="notify-overlay" id="notify-overlay" aria-hidden="true">
+    <div class="notify-modal" role="dialog" aria-modal="true" aria-labelledby="notify-title" aria-describedby="notify-description">
+      <button class="notify-close" type="button" data-notify-close aria-label="Затвори формата">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke-linecap="round"/></svg>
+      </button>
+      <div class="notify-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6.75A2.25 2.25 0 0 1 6.25 4.5h11.5A2.25 2.25 0 0 1 20 6.75v7.5a2.25 2.25 0 0 1-2.25 2.25H11l-4.75 3v-3A2.25 2.25 0 0 1 4 14.25v-7.5Z" stroke-linejoin="round"/><path d="m6.5 7.5 5.5 4 5.5-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h2 class="notify-title" id="notify-title">Научи първи</h2>
+      <p class="notify-desc" id="notify-description">Остави имейла си и ще ти кажем, когато Lioo стартира в <strong>App Store</strong> и <strong>Google Play</strong>.</p>
+      <form class="notify-form" id="notify-form" novalidate>
+        <input class="notify-input" id="notify-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="Твоят имейл адрес" aria-label="Имейл адрес" required />
+        <button class="notify-submit" type="submit">Уведоми ме</button>
+      </form>
+      <p class="notify-status" id="notify-status" role="status" aria-live="polite"></p>
+      <p class="notify-privacy">Ще използваме имейла ти само за известие за старта на Lioo.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./" class="nav-logo" aria-label="Lioo — начало">
+            <img src="../images/lioo-logo.png" alt="Lioo" class="footer-logo-img" />
+          </a>
+          <p class="footer-tagline">Личен стилист с изкуствен интелект.</p>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4 class="footer-col-title">Продукт</h4>
+            <a href="https://app.liooclo.com" class="footer-link" data-app-link>Опитай Lioo</a>
+            <a href="features/" class="footer-link">Функции</a>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title">Правна информация</h4>
+            <a href="https://liooclo.com/privacy" class="footer-link">Политика за поверителност</a>
+            <a href="https://liooclo.com/terms" class="footer-link">Условия за ползване</a>
+            <a href="https://liooclo.com/impressum" class="footer-link">Impressum</a>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title">Компания</h4>
+            <a href="contact/" class="footer-link">Контакти</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 DagMart LTD. Всички права запазени.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../site-config.js"></script>
+  <script src="../script.js?v=lang-20261108"></script>
+</body>
+</html>

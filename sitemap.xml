@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://liooclo.com/</loc></url>
-  <url><loc>https://liooclo.com/features/</loc></url>
-  <url><loc>https://liooclo.com/contact/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://liooclo.com/</loc><xhtml:link rel="alternate" hreflang="en" href="https://liooclo.com/"/><xhtml:link rel="alternate" hreflang="bg" href="https://liooclo.com/bg/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://liooclo.com/"/></url>
+  <url><loc>https://liooclo.com/bg/</loc><xhtml:link rel="alternate" hreflang="en" href="https://liooclo.com/"/><xhtml:link rel="alternate" hreflang="bg" href="https://liooclo.com/bg/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://liooclo.com/"/></url>
+  <url><loc>https://liooclo.com/features/</loc><xhtml:link rel="alternate" hreflang="en" href="https://liooclo.com/features/"/><xhtml:link rel="alternate" hreflang="bg" href="https://liooclo.com/bg/features/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://liooclo.com/features/"/></url>
+  <url><loc>https://liooclo.com/bg/features/</loc><xhtml:link rel="alternate" hreflang="en" href="https://liooclo.com/features/"/><xhtml:link rel="alternate" hreflang="bg" href="https://liooclo.com/bg/features/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://liooclo.com/features/"/></url>
+  <url><loc>https://liooclo.com/contact/</loc><xhtml:link rel="alternate" hreflang="en" href="https://liooclo.com/contact/"/><xhtml:link rel="alternate" hreflang="bg" href="https://liooclo.com/bg/contact/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://liooclo.com/contact/"/></url>
+  <url><loc>https://liooclo.com/bg/contact/</loc><xhtml:link rel="alternate" hreflang="en" href="https://liooclo.com/contact/"/><xhtml:link rel="alternate" hreflang="bg" href="https://liooclo.com/bg/contact/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://liooclo.com/contact/"/></url>
 </urlset>

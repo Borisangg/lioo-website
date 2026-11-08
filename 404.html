@@ -18,8 +18,8 @@
     <section class="page-hero">
       <div class="page-wrap"><div class="page-hero-content">
         <span class="page-eyebrow">404</span>
-        <h1 class="page-title">This page is<br /><span class="gradient-text">out of style.</span></h1>
-        <p class="page-lead">The page you requested does not exist or has moved.</p>
+        <h1 class="page-title" id="nf-title">This page is<br /><span class="gradient-text">out of style.</span></h1>
+        <p class="page-lead" id="nf-lead">The page you requested does not exist or has moved.</p>
         <a id="home-link" href="./" class="btn-primary" style="margin-top: 34px">Back to Lioo</a>
       </div></div>
     </section>
@@ -28,6 +28,21 @@
     if (window.location.hostname.endsWith('github.io')) {
       document.getElementById('home-link').href = '/lioo-website/';
     }
+    // Bulgarian visitors (Bulgarian pages, a remembered choice, or a Bulgarian browser) get Bulgarian text.
+    (function () {
+      var stored = null;
+      try { stored = window.localStorage.getItem('lioo_site_lang'); } catch (e) {}
+      var browser = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+      var bg = /^\/bg(\/|$)/.test(window.location.pathname) || stored === 'bg' || (!stored && /^bg/i.test(browser));
+      if (!bg) return;
+      document.documentElement.lang = 'bg';
+      document.title = 'Страницата не е намерена — Lioo';
+      document.getElementById('nf-title').innerHTML = 'Тази страница<br /><span class="gradient-text">не е на мода.</span>';
+      document.getElementById('nf-lead').textContent = 'Страницата, която търсиш, не съществува или е преместена.';
+      var home = document.getElementById('home-link');
+      home.textContent = 'Обратно към Lioo';
+      if (!window.location.hostname.endsWith('github.io')) home.href = '/bg/';
+    })();
   </script>
 </body>
 </html>

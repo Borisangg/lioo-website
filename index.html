@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang-alt="bg/">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,9 @@
   <meta name="description" content="Lioo is an AI-powered personal stylist. Describe what you want, get curated outfit ideas, and shop smarter — all through a simple chat." />
   <meta name="keywords" content="AI stylist, personal stylist, fashion AI, outfit generator, Lioo, style recommendations" />
   <link rel="canonical" href="https://liooclo.com/" />
+  <link rel="alternate" hreflang="en" href="https://liooclo.com/" />
+  <link rel="alternate" hreflang="bg" href="https://liooclo.com/bg/" />
+  <link rel="alternate" hreflang="x-default" href="https://liooclo.com/" />
   <meta name="theme-color" content="#0C0B0B" />
 
   <!-- Open Graph -->
@@ -16,6 +19,7 @@
   <meta property="og:url" content="https://liooclo.com/" />
   <meta property="og:image" content="https://liooclo.com/images/hero-phone.png" />
 
+  <script src="lang.js"></script>
   <link rel="icon" type="image/png" href="images/lioo-icon.png" />
 
   <!-- Fonts -->
@@ -23,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=notify-modal-20260819" />
+  <link rel="stylesheet" href="style.css?v=lang-20261108" />
 </head>
 <body>
 
@@ -38,7 +42,7 @@
         <a href="features/" class="nav-link">Features</a>
         <a href="contact/" class="nav-link">Contact</a>
       </div>
-      <a href="https://app.liooclo.com" class="nav-cta" id="nav-try-btn" data-app-link>Try Lioo</a>
+      <div class="lang-switch" role="group" aria-label="Language"><a href="./" class="lang-link active" lang="en" hreflang="en" aria-current="true" data-set-lang="en">EN</a><a href="bg/" class="lang-link" lang="bg" hreflang="bg" data-set-lang="bg">BG</a></div><a href="https://app.liooclo.com" class="nav-cta" id="nav-try-btn" data-app-link>Try Lioo</a>
       <button class="nav-mobile-toggle" id="mobile-toggle" type="button" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -395,6 +399,6 @@
   </footer>
 
   <script src="site-config.js"></script>
-  <script src="script.js?v=notify-modal-20260819"></script>
+  <script src="script.js?v=lang-20261108"></script>
 </body>
 </html>

@@ -2,6 +2,12 @@
 
 The public marketing website for **Lioo**, an AI-powered personal stylist.
 
+## Languages
+
+The site has two languages: English at `/` and Bulgarian at `/bg/` (same pages, same layout).
+`lang.js` sends first-time visitors with a Bulgarian browser to `/bg/` and remembers a manual
+EN / BG choice. When you change text on an English page, change the matching Bulgarian page in `bg/` too.
+
 ## Pages
 
 - Home

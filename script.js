@@ -8,6 +8,7 @@
 (function () {
   'use strict';
 
+  const isBg = document.documentElement.lang === 'bg';
   const appUrl = window.LIOO_SITE && window.LIOO_SITE.appUrl;
   if (appUrl) {
     document.querySelectorAll('[data-app-link]').forEach((link) => {
@@ -82,17 +83,19 @@
     const email = notifyEmail.value.trim();
     notifyEmail.value = email;
     if (!notifyEmail.checkValidity()) {
-      setNotifyStatus('Please enter a valid email address.', true);
+      setNotifyStatus(isBg ? 'Моля, въведи валиден имейл адрес.' : 'Please enter a valid email address.', true);
       trackMarketingEvent('notify_email_submission_failed', { source: 'notify_modal', reason: 'invalid_email' });
       notifyEmail.focus();
       return;
     }
 
     trackMarketingEvent('notify_email_submitted', { source: 'notify_modal', delivery: 'mailto' });
-    const subject = encodeURIComponent('Lioo app launch notification');
-    const body = encodeURIComponent(`Please add ${email} to the Lioo app launch notification list.`);
+    const subject = encodeURIComponent(isBg ? 'Известие за старта на приложението Lioo' : 'Lioo app launch notification');
+    const body = encodeURIComponent(isBg
+      ? `Моля, добавете ${email} към списъка за известие за старта на приложението Lioo.`
+      : `Please add ${email} to the Lioo app launch notification list.`);
     window.location.href = `mailto:support@liooclo.com?subject=${subject}&body=${body}`;
-    setNotifyStatus('Your email app is opening. Send the message to finish.', false);
+    setNotifyStatus(isBg ? 'Пощенското ти приложение се отваря. Изпрати съобщението, за да завършиш.' : 'Your email app is opening. Send the message to finish.', false);
   });
 
   /* ─── HERO WORD REVEAL ─────────────────────────────── */
